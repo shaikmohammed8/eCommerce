@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">eCommerce</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Login_text">Login</string>
+    <string name="sign_up_text">Sign Up</string>
+    <string name="name_text">Name</string>
+    <string name="password_text">Password</string>
+    <string name="facebookButtonDescription">Facebook Button</string>
+    <string name="googleStringDescription">Google Button</string>
+    <string name="or_text">or</string>
+    <string name="phone_no_text">Phone no.</string>
+    <string name="email_text">Email</string>
+</resources>
