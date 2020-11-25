@@ -19,7 +19,7 @@
             android:id="@+id/nameForRegister"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:layout_marginTop="170dp"
+            android:layout_marginTop="150dp"
             android:background="@drawable/round_button_green"
             android:hint="@string/name_text"
             android:importantForAutofill="no"
@@ -37,7 +37,7 @@
             android:id="@+id/emailForRegister"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="15dp"
             android:background="@drawable/round_button_green"
             android:hint="@string/email_text"
             android:importantForAutofill="no"
@@ -55,7 +55,7 @@
             android:id="@+id/PhoneNoForRegister"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="15dp"
             android:background="@drawable/round_button_green"
             android:hint="@string/phone_no_text"
             android:importantForAutofill="no"
@@ -74,7 +74,7 @@
             android:id="@+id/passwordForRegister"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="15dp"
             android:background="@drawable/round_button_green"
             android:hint="@string/password_text"
             android:importantForAutofill="no"
@@ -93,7 +93,7 @@
             android:id="@+id/registerSingUpButton"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="22dp"
             android:background="@drawable/round_button_white"
             android:text="@string/sign_up_text"
             android:textColor="@color/greenColor"
@@ -155,6 +155,18 @@
             app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintStart_toStartOf="@+id/view"
             app:layout_constraintTop_toBottomOf="@+id/registerSingUpButton" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:visibility="gone"
+            android:background="@color/common_google_signin_btn_text_dark_focused"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
