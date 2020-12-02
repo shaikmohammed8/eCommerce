@@ -11,4 +11,6 @@
     <string name="or_text">or</string>
     <string name="phone_no_text">Phone no.</string>
     <string name="email_text">Email</string>
+    <string name="already_have_an_account">already have an account?</string>
+    <string name="does_not_have_an_account">dose not have an account?</string>
 </resources>

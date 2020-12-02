@@ -15,43 +15,43 @@
 
         <EditText
             android:id="@+id/emailForLogin"
-            android:layout_width="wrap_content"
+            style="@style/editText"
+            android:layout_width="300dp"
             android:layout_height="50dp"
             android:layout_marginTop="200dp"
             android:background="@drawable/round_button_green"
-            android:hint="@string/name_text"
+            android:drawableStart="@drawable/ic_baseline_email_24"
+            android:drawablePadding="5dp"
+            android:hint="@string/email_text"
             android:importantForAutofill="no"
             android:inputType="textEmailAddress"
             android:paddingStart="20dp"
             android:paddingEnd="10dp"
-            android:textColor="@color/WhiteColor"
-            android:textColorHint="@color/EditTextColor"
-            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/passwordForLogin"
-            android:layout_width="wrap_content"
+            style="@style/editText"
+            android:layout_width="300dp"
             android:layout_height="50dp"
             android:layout_marginTop="16dp"
             android:background="@drawable/round_button_green"
+            android:drawableStart="@drawable/ic_baseline_https_24"
+            android:drawablePadding="5sp"
             android:hint="@string/password_text"
             android:importantForAutofill="no"
             android:inputType="textPassword"
             android:paddingStart="20dp"
             android:paddingEnd="10dp"
-            android:textColor="@color/WhiteColor"
-            android:textColorHint="@color/EditTextColor"
-            android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/emailForLogin" />
 
-        <Button
+        <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
             android:id="@+id/loginSingInButton"
-            android:layout_width="150dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:background="@drawable/round_button_white"
@@ -60,9 +60,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/passwordForLogin" />
+            app:layout_constraintTop_toBottomOf="@+id/passwordForLogin"
+            app:spinning_bar_color="@color/greenColor" />
 
-        <ImageButton
+        <br.com.simplepass.loadingbutton.customViews.CircularProgressImageButton
             android:id="@+id/googleButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -70,23 +71,21 @@
             android:layout_marginEnd="8dp"
             android:background="@drawable/round_social_button"
             android:contentDescription="@string/googleStringDescription"
-            android:elevation="5dp"
             app:layout_constraintEnd_toStartOf="@+id/facebookButton"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_chainStyle="packed"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/orText"
-            app:srcCompat="@android:drawable/btn_star_big_on" />
+            app:srcCompat="@drawable/googleg_standard_color_18" />
 
         <ImageButton
             android:id="@+id/facebookButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="28dp"
-            android:background="@drawable/round_social_button"
+            android:background="@drawable/round_button_white"
             android:contentDescription="@string/facebookButtonDescription"
-            android:elevation="5dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/googleButton"
@@ -116,5 +115,29 @@
             app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintStart_toStartOf="@+id/view"
             app:layout_constraintTop_toBottomOf="@+id/loginSingInButton" />
+
+        <TextView
+            android:id="@+id/doesNotHaveAnAccountText"
+            style="@style/authText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="55dp"
+            android:layout_marginBottom="62dp"
+            android:text="@string/does_not_have_an_account"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/signUpNavigation"
+            style="@style/authText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="62dp"
+            android:text="@string/sign_up_text"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/doesNotHaveAnAccountText" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

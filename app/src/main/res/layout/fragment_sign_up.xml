@@ -17,54 +17,54 @@
 
         <EditText
             android:id="@+id/nameForRegister"
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="50dp"
             android:layout_marginTop="150dp"
             android:background="@drawable/round_button_green"
+            android:drawableStart="@drawable/ic_baseline_perm_identity_24"
+            android:drawablePadding="5dp"
             android:hint="@string/name_text"
             android:importantForAutofill="no"
             android:inputType="textPersonName"
             android:paddingStart="20dp"
             android:paddingEnd="10dp"
-            android:textColor="@color/WhiteColor"
-            android:textColorHint="@color/EditTextColor"
-            android:textSize="18sp"
+            style="@style/editText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
             android:id="@+id/emailForRegister"
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="50dp"
             android:layout_marginTop="15dp"
             android:background="@drawable/round_button_green"
+            android:drawableStart="@drawable/ic_baseline_email_24"
+            android:drawablePadding="5dp"
             android:hint="@string/email_text"
             android:importantForAutofill="no"
             android:inputType="textEmailAddress"
             android:paddingStart="20dp"
             android:paddingEnd="10dp"
-            android:textColor="@color/WhiteColor"
-            android:textColorHint="@color/EditTextColor"
-            android:textSize="18sp"
+            style="@style/editText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/nameForRegister" />
 
         <EditText
             android:id="@+id/PhoneNoForRegister"
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="50dp"
             android:layout_marginTop="15dp"
             android:background="@drawable/round_button_green"
+            android:drawableStart="@drawable/ic_baseline_phone_24"
+            android:drawablePadding="5dp"
             android:hint="@string/phone_no_text"
             android:importantForAutofill="no"
             android:inputType="phone"
             android:paddingStart="20dp"
             android:paddingEnd="10dp"
-            android:textColor="@color/WhiteColor"
-            android:textColorHint="@color/EditTextColor"
-            android:textSize="18sp"
+          style="@style/editText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent"
@@ -72,24 +72,24 @@
 
         <EditText
             android:id="@+id/passwordForRegister"
-            android:layout_width="wrap_content"
+            android:layout_width="300dp"
             android:layout_height="50dp"
             android:layout_marginTop="15dp"
             android:background="@drawable/round_button_green"
+            android:drawableStart="@drawable/ic_baseline_https_24"
+            android:drawablePadding="5dp"
             android:hint="@string/password_text"
             android:importantForAutofill="no"
             android:inputType="textPassword"
             android:paddingStart="20dp"
             android:paddingEnd="10dp"
-            android:textColor="@color/WhiteColor"
-            android:textColorHint="@color/EditTextColor"
-            android:textSize="18sp"
+            style="@style/editText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.495"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/PhoneNoForRegister" />
 
-        <Button
+        <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
             android:id="@+id/registerSingUpButton"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
@@ -97,11 +97,13 @@
             android:background="@drawable/round_button_white"
             android:text="@string/sign_up_text"
             android:textColor="@color/greenColor"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/passwordForRegister" />
+            app:layout_constraintTop_toBottomOf="@+id/passwordForRegister"
+            app:spinning_bar_color="@color/greenColor"/>
 
-        <ImageButton
+        <br.com.simplepass.loadingbutton.customViews.CircularProgressImageButton
             android:id="@+id/googleButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -115,7 +117,7 @@
             app:layout_constraintHorizontal_chainStyle="packed"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/orText"
-            app:srcCompat="@android:drawable/btn_star_big_on" />
+            app:srcCompat="@drawable/googleg_standard_color_18" />
 
         <ImageButton
             android:id="@+id/facebookButton"
@@ -131,6 +133,7 @@
             app:layout_constraintStart_toEndOf="@+id/googleButton"
             app:layout_constraintTop_toBottomOf="@+id/orText"
             app:srcCompat="@android:drawable/btn_star_big_on" />
+
 
         <View
             android:id="@+id/view"
@@ -167,6 +170,29 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/haveAccount"
+            style="@style/authText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="69dp"
+            android:layout_marginBottom="62dp"
+            android:text="@string/already_have_an_account"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/loginNavigation"
+            style="@style/authText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="62dp"
+            android:text="@string/Login_text"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/haveAccount" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
