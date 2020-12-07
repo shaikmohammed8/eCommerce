@@ -3,7 +3,7 @@ package com.example.ecommerce.repository
 
 import com.google.firebase.auth.FirebaseAuth
 
-class FirebaseRepository(){
+class FirebaseRepository{
 
     val auth: FirebaseAuth by lazy {
         FirebaseAuth.getInstance()

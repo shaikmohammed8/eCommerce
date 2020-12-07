@@ -6,5 +6,6 @@
     <color name="WhiteColor">#ffff</color>
     <color name="greenColor">#22D091</color>
     <color name="MetarialGreenColor">#1DE9B6</color>
-    <color name="EditTextColor">#88FFFFFF</color>
+    <color name="EditTextColor">#74CB7E7E</color>
+    <color name="RedColor">#D43C40</color>
 </resources>

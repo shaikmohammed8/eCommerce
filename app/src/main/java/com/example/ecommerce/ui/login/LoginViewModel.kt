@@ -5,12 +5,10 @@ import android.widget.Toast
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.ecommerce.MainActivity
 import com.example.ecommerce.repository.FirebaseRepository
 
 class LoginViewModel: ViewModel() {
 private val repository=FirebaseRepository()
-    val activity=MainActivity()
     private val _btAnimation= MutableLiveData<Boolean>()
     val btAnimation: LiveData<Boolean> get() = _btAnimation
 

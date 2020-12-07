@@ -6,15 +6,12 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.example.ecommerce.MainActivity
 import com.example.ecommerce.R
 import com.example.ecommerce.databinding.FragmentResultBinding
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
+import com.facebook.login.LoginManager
 
 
 class ResultFragment : Fragment() {
@@ -37,7 +34,8 @@ binding.button4.setOnClickListener {
     findNavController().navigate(R.id.action_resultFragment2_to_signUpFragment2)
 }
         binding.button5.setOnClickListener {
-        viewModel.logOut()
+            LoginManager.getInstance().logOut()
+            viewModel.logOut()
             val intent=Intent(context,MainActivity::class.java)
             startActivity(intent)
             activity?.finish()

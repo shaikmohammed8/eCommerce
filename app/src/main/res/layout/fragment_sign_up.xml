@@ -11,173 +11,198 @@
         android:id="@+id/frameLayout2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/greenColor"
+        android:background="@color/RedColor"
         tools:context=".ui.signup.SignUpFragment">
 
-
-        <EditText
-            android:id="@+id/nameForRegister"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="150dp"
-            android:background="@drawable/round_button_green"
-            android:drawableStart="@drawable/ic_baseline_perm_identity_24"
-            android:drawablePadding="5dp"
-            android:hint="@string/name_text"
-            android:importantForAutofill="no"
-            android:inputType="textPersonName"
-            android:paddingStart="20dp"
-            android:paddingEnd="10dp"
-            style="@style/editText"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <EditText
-            android:id="@+id/emailForRegister"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/round_button_green"
-            android:drawableStart="@drawable/ic_baseline_email_24"
-            android:drawablePadding="5dp"
-            android:hint="@string/email_text"
-            android:importantForAutofill="no"
-            android:inputType="textEmailAddress"
-            android:paddingStart="20dp"
-            android:paddingEnd="10dp"
-            style="@style/editText"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/nameForRegister" />
-
-        <EditText
-            android:id="@+id/PhoneNoForRegister"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/round_button_green"
-            android:drawableStart="@drawable/ic_baseline_phone_24"
-            android:drawablePadding="5dp"
-            android:hint="@string/phone_no_text"
-            android:importantForAutofill="no"
-            android:inputType="phone"
-            android:paddingStart="20dp"
-            android:paddingEnd="10dp"
-          style="@style/editText"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.495"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/emailForRegister" />
-
-        <EditText
-            android:id="@+id/passwordForRegister"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:layout_marginTop="15dp"
-            android:background="@drawable/round_button_green"
-            android:drawableStart="@drawable/ic_baseline_https_24"
-            android:drawablePadding="5dp"
-            android:hint="@string/password_text"
-            android:importantForAutofill="no"
-            android:inputType="textPassword"
-            android:paddingStart="20dp"
-            android:paddingEnd="10dp"
-            style="@style/editText"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.495"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/PhoneNoForRegister" />
-
-        <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
-            android:id="@+id/registerSingUpButton"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="22dp"
-            android:background="@drawable/round_button_white"
-            android:text="@string/sign_up_text"
-            android:textColor="@color/greenColor"
-            app:layout_constraintHorizontal_bias="0.498"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/passwordForRegister"
-            app:spinning_bar_color="@color/greenColor"/>
-
-        <br.com.simplepass.loadingbutton.customViews.CircularProgressImageButton
-            android:id="@+id/googleButton"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="28dp"
-            android:layout_marginEnd="8dp"
-            android:background="@drawable/round_social_button"
-            android:contentDescription="@string/googleStringDescription"
-            android:elevation="5dp"
-            app:layout_constraintEnd_toStartOf="@+id/facebookButton"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintHorizontal_chainStyle="packed"
+            android:layout_marginTop="65dp"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/orText"
-            app:srcCompat="@drawable/googleg_standard_color_18" />
+            app:layout_constraintTop_toBottomOf="@+id/textView4">
 
-        <ImageButton
-            android:id="@+id/facebookButton"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/nameForSignUp"
+                    style="@style/editText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginEnd="24dp"
+                    android:background="@drawable/edittext"
+                    android:drawableStart="@drawable/ic_baseline__person_24"
+                    android:drawablePadding="5dp"
+                    android:ems="10"
+                    android:hint="@string/name_text"
+                    android:importantForAutofill="no"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    app:layout_constraintBottom_toTopOf="@+id/phoneNoForSignUp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/phoneNoForSignUp"
+                    style="@style/editText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="24dp"
+                    android:background="@drawable/edittext"
+                    android:drawableStart="@drawable/ic_baseline_phone_24"
+                    android:drawablePadding="5dp"
+                    android:ems="10"
+                    android:hint="@string/phone_no_text"
+                    android:importantForAutofill="no"
+                    android:inputType="phone"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    app:layout_constraintBottom_toTopOf="@+id/emailForSignUp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/nameForSignUp" />
+
+                <EditText
+                    android:id="@+id/emailForSignUp"
+                    style="@style/editText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edittext"
+                    android:drawableStart="@drawable/ic_baseline_email_24"
+                    android:drawablePadding="5dp"
+                    android:ems="10"
+                    android:hint="@string/email_text"
+                    android:inputType="textEmailAddress"
+                    android:paddingStart="7dp"
+                    android:paddingEnd="3dp"
+                    app:layout_constraintBottom_toTopOf="@+id/passwordForSignUp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/phoneNoForSignUp"
+                    android:importantForAutofill="no" />
+
+                <EditText
+                    android:id="@+id/passwordForSignUp"
+                    style="@style/editText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/edittext"
+                    android:drawableStart="@drawable/ic_baseline_https_24"
+                    android:drawablePadding="5dp"
+                    android:ems="10"
+                    android:hint="@string/password_text"
+                    android:inputType="textPassword"
+                    android:paddingStart="7dp"
+                    android:paddingEnd="3dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/emailForSignUp"
+                    android:importantForAutofill="no" />
+
+                <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+                    android:id="@+id/SignUpButton"
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/login_button"
+                    android:text="@string/sign_up_text"
+                    android:textColor="@color/WhiteColor"
+                    android:textSize="18sp"
+                    app:spinning_bar_padding="3dp"
+                    app:spinning_bar_color="@color/WhiteColor"
+                    app:spinning_bar_width="2dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/passwordForSignUp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/floatingActionButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="28dp"
-            android:background="@drawable/round_social_button"
-            android:contentDescription="@string/facebookButtonDescription"
-            android:elevation="5dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toEndOf="@+id/googleButton"
-            app:layout_constraintTop_toBottomOf="@+id/orText"
-            app:srcCompat="@android:drawable/btn_star_big_on" />
-
-
-        <View
-            android:id="@+id/view"
-            android:layout_width="wrap_content"
-            android:layout_height="1dp"
-            android:background="@color/WhiteColor"
-            app:layout_constraintBottom_toTopOf="@+id/facebookButton"
+            android:layout_marginTop="20dp"
+            app:backgroundTint="@color/WhiteColor"
+            app:elevation="2dp"
+            app:fabCustomSize="90dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/registerSingUpButton" />
+            app:layout_constraintTop_toBottomOf="@+id/textView4"
+            app:maxImageSize="100dp"
+            app:srcCompat="@drawable/ic_baseline_perm_identity_24" />
 
         <TextView
-            android:id="@+id/orText"
-            android:layout_width="50sp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:background="@color/greenColor"
-            android:text="@string/or_text"
-            android:textAlignment="center"
-            android:textSize="18sp"
-            app:layout_constraintEnd_toEndOf="@id/view"
-            app:layout_constraintHorizontal_bias="0.501"
-            app:layout_constraintStart_toStartOf="@+id/view"
-            app:layout_constraintTop_toBottomOf="@+id/registerSingUpButton" />
-
-        <ProgressBar
-            android:id="@+id/progressBar"
-            style="?android:attr/progressBarStyle"
+            android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
-            android:visibility="gone"
-            android:background="@color/common_google_signin_btn_text_dark_focused"
+            android:layout_marginTop="35dp"
+            android:text="@string/sign_up_text"
+            android:textColor="@color/WhiteColor"
+            android:textSize="40sp"
+            android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="65dp"
+            app:cardCornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+            <ImageView
+                android:id="@+id/facebookButtonSignup"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="11dp"
+                android:background="@mipmap/facebool"
+                android:contentDescription="@string/facebookButtonDescription" />
+
+            <View
+                android:id="@+id/signUpDivider"
+                android:layout_width="3dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/RedColor" />
+
+            <ImageView
+                android:id="@+id/googleButtonSignup"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="11dp"
+                app:srcCompat="@mipmap/google"
+                android:contentDescription="@string/googleStringDescription" />
+        </androidx.cardview.widget.CardView>
 
         <TextView
             android:id="@+id/haveAccount"
             style="@style/authText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="69dp"
-            android:layout_marginBottom="62dp"
+            android:layout_marginStart="70dp"
+            android:layout_marginBottom="32dp"
             android:text="@string/already_have_an_account"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -188,7 +213,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
-            android:layout_marginBottom="62dp"
+            android:layout_marginBottom="32dp"
             android:text="@string/Login_text"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
